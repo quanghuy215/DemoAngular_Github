@@ -3,9 +3,7 @@
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo optio, porro tenetur cum quae eaque sit velit enim
     provident! Ipsum a vero quos, tempora doloribus possimus? Quaerat ab dolore harum?</p>
   <h2>Hello {{name}} </h2>
-  <input value="{{name}}" />
   <br />
-  <input [value]="name" title="this is {{name}}" />
-  <br />
-  <input [value]="name" [title]="'this is' + name" />
+  <h2 *ngIf="age <= 18">You are young</h2>
+  <h2 *ngIf="age > 18">You are old</h2>
 </div>
