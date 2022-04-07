@@ -2,8 +2,8 @@
   <h3>This is component Home</h3>
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo optio, porro tenetur cum quae eaque sit velit enim
     provident! Ipsum a vero quos, tempora doloribus possimus? Quaerat ab dolore harum?</p>
+  <input type="text" [(ngModel)]="name" />
   <h2>Hello {{name}} </h2>
   <br />
-  <h2 *ngIf="age <= 18">You are young</h2>
-  <h2 *ngIf="age > 18">You are old</h2>
+  <button (click)="resetName()">Reset name</button>
 </div>
