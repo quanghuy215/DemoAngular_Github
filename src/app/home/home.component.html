@@ -32,7 +32,7 @@
       <td>{{i+1}}</td>
       <td>{{item.name}}</td>
       <td class="right"><span [ngClass]="{'negativeNumber':item.price<40}">{{item.price}}</span></td>
-      <td><span *ngIf="item.sale">Big Sale!!!</span></td>
+      <td><span>{{item.sale | onSale | uppercase}}</span></td>
     </tr>
   </table>
 </div>
