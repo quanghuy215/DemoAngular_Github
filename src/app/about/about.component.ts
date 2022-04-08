@@ -1,3 +1,4 @@
+import { CommonService } from './../Services/common.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.scss'],
 })
 export class AboutComponent implements OnInit {
-  public loginName = 'admin';
+  public loginName = 'user';
   public myColor = 'red';
-  constructor() {}
+  public counter = 0;
+  public counterBP = 0;
+  constructor(private common: CommonService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.counter = this.common.counter;
+    this.counterBP = this.common.binhPhuong(this.counter);
+    this.common.counter++;
+  }
 }
