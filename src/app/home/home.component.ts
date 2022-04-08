@@ -71,7 +71,7 @@ export class HomeComponent implements OnInit {
     console.log('City = ', this.cities);
   }
   public resetName(): void {
-    console.log('resetName');
+    //console.log('resetName');
     this.name = '';
   }
   public changeCity(event: any) {
