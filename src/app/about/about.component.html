@@ -1,4 +1,6 @@
-<h1>This is component About!</h1>
+<h1 appHighLight>This is component About!</h1>
+<h1 [appHighLight]="myColor">This is component About!</h1>
+<h1 [appHighLight]="'gray'">This is component About!</h1>
 <ul [ngSwitch]="loginName">
   <li *ngSwitchCase="'user'">
     <p>User is logged in...</p>
