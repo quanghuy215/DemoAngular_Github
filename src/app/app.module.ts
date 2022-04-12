@@ -7,10 +7,13 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { OnSalePipe } from './on-sale.pipe';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HighLightDirective } from './Directives/high-light.directive';
 import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,14 +22,11 @@ import { TemplateDrivenFormComponent } from './template-driven-form/template-dri
     OnSalePipe,
     PageNotFoundComponent,
     HighLightDirective,
-    TemplateDrivenFormComponent
+    TemplateDrivenFormComponent,
+    ReactiveFormComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
