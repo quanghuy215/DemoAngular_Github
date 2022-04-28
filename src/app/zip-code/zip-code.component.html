@@ -1,0 +1,14 @@
+<div class="content">
+  <pre class="card card-block card-header mb-3">Zipcode: {{zipcode | json}}</pre>
+  <input class="form-control" [(ngModel)]="zipcode" />
+  <br />
+  <button type="button" class="btn btn-primary" (click)="getDataZipcode()">Get Data</button>
+  <br />
+  <br />
+  <!-- <div>{{dataZip | json}}</div> -->
+  <div>
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let item of zipList | keyvalue">{{item.key}} : {{item.value}} </li>
+    </ul>
+  </div>
+</div>

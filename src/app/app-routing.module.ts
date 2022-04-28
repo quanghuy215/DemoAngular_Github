@@ -1,3 +1,4 @@
+import { ZipCodeComponent } from './zip-code/zip-code.component';
 import { GetDataComponent } from './get-data/get-data.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { HomeComponent } from './home/home.component';
@@ -7,7 +8,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
 import { PostDataComponent } from './post-data/post-data.component';
-
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
 const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'home', component: HomeComponent },
@@ -15,12 +16,13 @@ const routes: Routes = [
   { path: 'reactive', component: ReactiveFormComponent },
   { path: 'getdata', component: GetDataComponent },
   { path: 'postdata', component: PostDataComponent },
+  { path: 'zipcode', component: ZipCodeComponent },
   { path: '', component: HomeComponent },
   { path: '**', component: PageNotFoundComponent }, // Wildcard route for a 404 page
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes), TooltipModule.forRoot()],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

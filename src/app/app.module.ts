@@ -15,7 +15,9 @@ import { TemplateDrivenFormComponent } from './template-driven-form/template-dri
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { GetDataComponent } from './get-data/get-data.component';
 import { PostDataComponent } from './post-data/post-data.component';
-
+import { ZipCodeComponent } from './zip-code/zip-code.component';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +30,7 @@ import { PostDataComponent } from './post-data/post-data.component';
     ReactiveFormComponent,
     GetDataComponent,
     PostDataComponent,
+    ZipCodeComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,6 +38,13 @@ import { PostDataComponent } from './post-data/post-data.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    ToastrModule.forRoot({
+      timeOut: 3500,
+      positionClass: 'toast-bottom-right',
+      preventDuplicates: true,
+      progressBar: true,
+    }),
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

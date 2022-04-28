@@ -8,9 +8,11 @@ import { Observable } from 'rxjs';
 export class HttpServerService {
   private REST_API_SERVER = 'http://localhost:3000';
   private REST_API_SERVER_RANDOM_USER = 'https://randomuser.me/api/?results=';
+  private REST_API_SERVER_ZIPCODE =
+    'http://zipcloud.ibsnet.co.jp/api/search?zipcode=';
   private httpOptions = {
     headers: new HttpHeaders({
-      'Content-Type': 'application/json',
+      'Content-Type': '*',
       //Authorization : 'my-auth-token'
     }),
   };
@@ -28,6 +30,10 @@ export class HttpServerService {
   }
   public getRandomUsers(users: number = 1): Observable<any> {
     const url = `${this.REST_API_SERVER_RANDOM_USER}` + users;
+    return this.httpClient.get<any>(url, this.httpOptions);
+  }
+  public getData(zipCode: any): Observable<any> {
+    const url = `${this.REST_API_SERVER_ZIPCODE}` + zipCode;
     return this.httpClient.get<any>(url, this.httpOptions);
   }
 }

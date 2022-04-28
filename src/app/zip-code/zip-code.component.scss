@@ -1,0 +1,17 @@
+.content {
+  border     : 1px solid;
+  padding    : 10px;
+  box-shadow : 5px 10px gray;
+  width      : 650px;
+  height     : auto;
+  padding    : 30px;
+  margin-left: 50px;
+  margin-top : 50px;
+}
+
+.child-content {
+  margin-top: 20px;
+  height    : 200px;
+  border    : 1px solid red;
+  padding   : 10px;
+}
